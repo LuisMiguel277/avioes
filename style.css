@@ -21,8 +21,8 @@ header {
     image-rendering: auto;
 }
 header > picture > img {
-    width: 400px;
-    margin: 70px;
+    width: 500px;
+    margin: auto;
 }
 header> h2 {
     text-align: center;
@@ -245,7 +245,7 @@ section#Planos {
 }
 
 section#Planos > h2 {
-    background-color: #001542;
+    background-color: #022164;
     color: white;
     padding: 15px;
     font-size: 2em;
@@ -265,7 +265,7 @@ section#planos2 > p {
 
 /* ======================== PLANOS OPCIONAIS ======================== */
 section#planosOpc {
-    background-color:  #062252;
+    background-color: #0E2780;
     display: flex;
     justify-content: center;
     height: 102vh;
@@ -295,7 +295,6 @@ section#planosOpc {
 .planosfic:hover{
     width: 51vw;
     height: 96vh;
-    border: 10px solid white;
     background-image: linear-gradient(to right,#033E8C,#0E2780);
 }
 .planosfic:hover img{
@@ -447,6 +446,9 @@ picture {
 @media (max-width: 768px) {
     header{
         height: 120vh;
+    }
+    header>picture>img{
+        width: 485px;
     }
     nav#menu{
         background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.788),transparent);
