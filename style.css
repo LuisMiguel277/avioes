@@ -47,11 +47,10 @@ nav#menu > a {
     min-width: 150px; 
     min-height: 50px;
     text-align: center;
-    transition:  0.4s;
+    transition: all 0.4s;
 }
 nav#menu a:hover{
     font-size: 1.3em;
-    border: 2px solid white;
     background-color: rgba(245, 245, 245, 0.247);
     font-weight: normal;
 
@@ -443,171 +442,196 @@ picture {
 }
 
 /* ======================== RESPONSIVIDADE ======================== */
+/* Responsivo: Estilos para telas menores (até 768px) */
 @media (max-width: 768px) {
-    header{
+
+    /* ---------- HEADER ---------- */
+    header {
         height: 120vh;
     }
-    header>picture>img{
+
+    header > picture > img {
         width: 485px;
     }
-    nav#menu{
-        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.788),transparent);
+
+    /* ---------- MENU ---------- */
+    nav#menu {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.788), transparent);
         height: 30vh;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
     }
-    nav#menu a{
+
+    nav#menu a {
         padding: 10px;
         margin: auto;
         width: 150px;
         height: 30px;
     }
-    section#family{
+
+    /* ---------- FAMILY SECTIONS ---------- */
+    section#family {
         flex-direction: column-reverse;
         height: 140vh;
     }
-    
-    section#family2{
+
+    section#family2 {
         flex-direction: column;
         height: 140vh;
     }
-    .family1{
+
+    .family1 {
         width: 90vw;
         height: 70vh;
     }
-    img#imgfamily{
+
+    img#imgfamily {
         width: 100%;
         height: 70%;
         box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.952);
-
     }
-    section#Promo{
+
+    section#family p#leg,
+    section#family2 p#leg {
+        font-size: 1.5em;
+        line-height: 40px;
+        padding: 20px;
+    }
+
+    /* ---------- PROMO SECTION ---------- */
+    section#Promo {
         flex-direction: column;
         height: 120vh;
     }
-    div#textpromo2{
+
+    div#textpromo2 {
         width: 400px;
         margin: auto;
-    }  
+    }
+
     section#Promo > div#textpromo2 > h2 {
         color: white;
         font-size: 2em;
         text-align: center;
         padding: 20px;
     }
-    div#textpromo{
+
+    div#textpromo {
         width: 95vw;
         margin: auto;
     }
-    div#textpromo>ul>li{
+
+    div#textpromo > ul > li {
         font-size: 1.2em;
         color: #f7f7f7;
         margin: 20px;
     }
-    section#family p#leg{
-        font-size: 1.5em;
-        line-height: 40px;
-        padding: 20px;
-    }
-    
-    section#family2 p#leg{
-        font-size: 1.5em;
-        line-height: 40px;
-        padding: 20px;
-    }
-    section#planosOpc{
+
+    /* ---------- PLANOS SECTION ---------- */
+    section#planosOpc {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 300vh;
     }
-    .planosfic{
+
+    .planosfic {
         display: flex;
         flex-direction: column;
         width: 70vw;
         height: 100vh;
     }
-    form>.passg{
+
+    .planosfic:hover {
+        width: 71vw;
+        height: 96vh;
+        border: 10px solid white;
+        box-shadow: inset 3px 5px 90px rgba(245, 245, 245, 0.048);
+    }
+
+    .planosfic:hover img {
+        width: 308px;
+    }
+
+    .planosfic:hover ul {
+        margin-left: 10%;
+        transition: all 0.5s ease-in-out 0.1s;
+    }
+
+    .planosfic:hover li {
+        font-size: 20px;
+        padding: 7px;
+        transition: all 0.6s ease-in-out 0.1s;
+    }
+
+    ul {
+        list-style-position: inside;
+        margin: 15px;
+        margin-left: 10%;
+    }
+
+    li {
+        font-size: 1.3em;
+        padding: 5px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-align: left;
+    }
+
+    /* ---------- FORMULÁRIO ---------- */
+    form > .passg {
         display: flex;
         flex-direction: column;
         gap: 10px;
         height: 60vh;
         width: 70vw;
     }
-    form>.passg>div#enli{
+
+    form > .passg > div#enli {
         display: flex;
-        gap: 5px;
         flex-direction: column;
+        gap: 5px;
     }
-    select,input#datas{
+
+    select,
+    input#datas {
         width: 295px;
         transition: 0.1s;
     }
-    select:hover{
+
+    select:hover,
+    input#datas:hover {
         width: 311px;
     }
-    input#datas:hover{
-        width: 311px;
-    }
-    button{
+
+    button {
         width: 99%;
     }
-    button:hover{
+
+    button:hover {
         width: 100%;
     }
-    button>img:hover{
+
+    button > img:hover {
         width: 37px;
     }
-    section#Passagens{
+
+    /* ---------- PASSAGENS ---------- */
+    section#Passagens {
         height: 70vh;
     }
-    button#desny{
-        background-size: cover;
 
+    button#desny {
+        background-size: cover;
     }
-    .des{
+
+    .des {
         background-size: cover;
         height: 30vh;
     }
-    .des:hover{
+
+    .des:hover {
         height: 32vh;
     }
-    
-ul{
-    list-style-position: inside;
-    margin: 15px;
-    margin-left: 10%;
-}
-li{
-    font-size: 1.3em;
-    padding: 5px 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    text-align: left;
-
-}
-.planosfic:hover{
-    width: 71vw;
-    height: 96vh;
-    border: 10px solid white;
-    box-shadow: inset 3px 5px 90px rgba(245, 245, 245, 0.048);
-
-}
-.planosfic:hover img{
-    width: 308px;
-}
-.planosfic:hover ul{
-    margin-left: 10%;
-     transition: all 0.5s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0.1s;
-}
-.planosfic:hover li{
-    font-size: 20px;
-    padding: 7px;
-    transition: all 0.6s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0.1s;
-}
 }

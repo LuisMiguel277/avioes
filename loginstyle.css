@@ -1,43 +1,16 @@
+/* ------------------ IMPORTAÇÕES E CONFIGURAÇÕES GLOBAIS ------------------ */
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-*{
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-    }
 
-nav {
-    display: flex;
-    justify-content: right;
-    text-align: right;
-    padding: 10px;
-    height: 17vh;
-    background-image: linear-gradient(to bottom,#000000d8 5%,transparent);
-
-}
-
-nav#menu > a {
-    padding: 15px;
-    margin: 15px;
-    border: 1px solid rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.212);
-    border-radius: 15px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    min-width: 150px; 
-    min-height: 50px;
-    text-align: center;
-    transition:  0.4s;
-    font-weight: normal;
-}
-nav#menu a:hover{
-    font-size: 1.3em;
-    border: 2px solid white;
-    background-color: rgba(245, 245, 245, 0.247);
-
 }
 
-body{
+/* ------------------ BODY ------------------ */
+body {
     background-image: url("Imagens/papeldeparedelogin.webp");
     background-repeat: no-repeat;
     background-size: cover;
@@ -45,12 +18,45 @@ body{
     image-rendering: auto;
     height: 100vh;
 }
-form{
+
+/* ------------------ NAV (MENU) ------------------ */
+nav {
     display: flex;
+    justify-content: right;
+    text-align: right;
+    padding: 10px;
+    height: 17vh;
+    background-image: linear-gradient(to bottom, #000000d8 5%, transparent);
+}
+
+nav#menu > a {
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.212);
+    border-radius: 15px;
+    min-width: 150px;
+    min-height: 50px;
+    text-align: center;
+    transition: 0.4s;
+    font-weight: normal;
+}
+
+nav#menu a:hover {
+    font-size: 1.3em;
+    border: 2px solid white;
+    background-color: rgba(245, 245, 245, 0.247);
+}
+
+/* ------------------ FORMULÁRIOS ------------------ */
+form {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 57%;
+    justify-content: center;
+    top: 58%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 350px;
     padding: 10px;
     text-align: center;
@@ -58,134 +64,91 @@ form{
     background-color: #00000098;
     border-radius: 25px;
     backdrop-filter: blur(3px);
-    }
-form{
-    display: flex;
-    flex-direction: column;
     margin: auto;
 }
-form#cad{
-    height: 500px;
+
+form#cad {
+    height: 70vh;
 }
-form#cad>input{
+
+form#cad > input {
     width: 290px;
     margin: 12px;
 }
-form#cad>input#entra{
+
+form#cad > input#entra {
     width: 291px;
 }
-input{
-     margin: 10px;
-    padding: 15px;
-    border: none;
-    border-radius: 15px;
+
+/* ------------------ INPUTS ------------------ */
+input {
+    margin: 10px;
     padding: 15px;
     width: 270px;
-    height: 60px;
+    height: 70px;
+    border: none;
+    border-radius: 15px;
     outline: none;
     font-size: 15px;
     font-weight: normal;
     background-color: rgb(5, 5, 5);
 }
-.blur{
-    color: white;
-    border-radius: 0px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.356);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.795);
-        font-family: "Noto Sans", sans-serif;
 
-    transition: all 0.2s;
-}
-.blur:hover{
-    border-bottom: 4px solid black;
-    background-color: rgba(0, 0, 0, 0.486);
-    font-size: 18px;
-
-}
-.login{
-    height: 470px;
-}
-input#entra{
+input#entra {
     margin-top: 20px;
     font-family: "Noto Sans", sans-serif;
     transition: 0.2s;
     font-size: 20px;
-    margin: 10px;
-    padding: 15px;
-    width: 270px;
-    height: 60px;
-    border: none;
-    border-radius: 15px;
     color: white;
 }
-input#entra:hover{
-    color: white;
+
+input#entra:hover {
     background-color: black;
     width: 275px;
     height: 61px;
     font-size: 22px;
-}a {
+    color: white;
+}
+
+/* ------------------ CLASSES ESPECÍFICAS ------------------ */
+.blur {
+    color: white;
+    border-radius: 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.356);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.795);
+    font-family: "Noto Sans", sans-serif;
+    transition: all 0.2s;
+}
+
+.blur:hover {
+    border-bottom: 4px solid black;
+    background-color: rgba(0, 0, 0, 0.486);
+    font-size: 18px;
+}
+
+.login {
+    height: 80vh;
+}
+/* ------------------ LINKS ------------------ */
+a {
     font-size: 1.2em;
     font-family: "Inter", sans-serif;
     text-decoration: none;
     color: white;
 }
-a#img:hover{
+
+a#img:hover {
     font-size: 0em;
-    padding: 0px;
+    padding: 0;
 }
+
 a:hover {
     font-size: 1.3em;
     padding: 12px;
 }
 
-picture{
-    display: flex;
-    justify-content: center;
-}
-img{
-    width: 60%;
-}
-@media (max-width: 768px) {
-    nav#menu{
-        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.788),transparent);
-        height: 25vh;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-    }
-    nav#menu a{
-        padding: 10px;
-        margin: auto;
-    }
-    body{
-        background-position: top center;
-        height: 110vh;
-    }
-    .login{
-        width: 320px;
-    }
-    .login>img{
-        width: 50%;
-    }
-    form{
-        top: 68%;
-    }
-    form#cad{
-        width: 320px;
-    }
-    form#cad>input{
-        width: 250px;
-    }
-    form#cad>input#entra{
-        width: 240px;
-    }
-    form#cad>input#entra:hover{
-        width: 245px;
-    }
-}
-p,a#cad{
+p, a#cad {
     font-family: "Noto Sans", sans-serif;
     color: white;
     text-decoration: none;
@@ -193,7 +156,66 @@ p,a#cad{
     margin: 5px;
     padding: 3px;
 }
-a#cad:hover{
+
+a#cad:hover {
     text-decoration: underline;
     margin-left: 6px;
+}
+
+/* ------------------ IMAGENS ------------------ */
+picture {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 20vw;
+}
+/* ------------------ MEDIA QUERY ------------------ */
+@media (max-width: 768px) {
+    nav#menu {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.788), transparent);
+        height: 25vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    nav#menu a {
+        padding: 10px;
+        margin: auto;
+    }
+
+    body {
+        background-position: top center;
+        height: 110vh;
+    }
+
+    .login {
+        width: 320px;
+    }
+
+    .login > img {
+        width: 50%;
+    }
+
+    form {
+        top: 68%;
+    }
+
+    form#cad {
+        width: 320px;
+    }
+
+    form#cad > input {
+        width: 250px;
+    }
+
+    form#cad > input#entra {
+        width: 240px;
+    }
+
+    form#cad > input#entra:hover {
+        width: 245px;
+    }
 }
