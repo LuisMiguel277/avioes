@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagamento Confirmado - Cartão</title>
+  <link rel="stylesheet" href="cardstyle.css">
+  <link rel="stylesheet" href="loginstyle.css">
+
+</head>
+<body>
+
+  <div class="container">
+    <h2>Pagamento com Cartão Confirmado 💳</h2>
+    <p>Obrigado pela compra!</p>
+
+    <div class="comprovante">
+      <strong>Comprovante:</strong><br>
+      Pagamento aprovado com sucesso via cartão.<br>
+      Código de transação: <code>#CARTAO987654321</code><br>
+      Data: <span id="data"></span>
+    </div>
+
+    <button onclick="window.location.href = 'index.html'">Voltar</button>
+  </div>
+
+  <script>
+    const hoje = new Date();
+    const formatada = hoje.toLocaleDateString('pt-BR') + ' ' + hoje.toLocaleTimeString('pt-BR');
+    document.getElementById('data').textContent = formatada;
+  </script>
+
+</body>
+</html>

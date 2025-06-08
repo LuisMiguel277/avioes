@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagamento Confirmado - Pix</title>
+  <link rel="stylesheet" href="pixstyle.css">
+  <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Pagamento via Pix Confirmado ✅</h2>
+    <p>Obrigado pela preferência!</p>
+
+    <div class="comprovante">
+      <strong>Comprovante:</strong><br>
+      Pagamento realizado com sucesso via Pix.<br>
+      Código de transação: <code>#PIX123456789</code><br>
+      Data: <span id="data"></span>
+    </div>
+
+    <button onclick= window.location.href = "pix-confirmado.html"> OK</button>
+
+  </div>
+
+  <script>
+    // Coloca a data atual no comprovante
+    const hoje = new Date();
+    const formatada = hoje.toLocaleDateString('pt-BR') + ' ' + hoje.toLocaleTimeString('pt-BR');
+    document.getElementById('data').textContent = formatada;
+  </script>
+
+</body>
+</html>

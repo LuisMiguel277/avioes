@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Boleto de Passagem Aérea</title>
+  <link rel="stylesheet" href="boletostyle.css">
+  <link rel="stylesheet" href="loginstyle.css">
+
+</head>
+<body>
+
+  <div class="boleto">
+    <h2>Boleto Bancário - Passagem Aérea</h2>
+
+    <div class="linha-digitavel">23790.12345 60000.123456 70000.123456 1 91230000079900</div>
+
+    <div class="dados-boleto">
+      <div class="campo"><strong id="nome"></strong><span>Nome do Passageiro</span></div>
+      <div class="campo"><strong id="rg"></strong><span>RG</span></div>
+      <div class="campo"><strong id="nasc"></strong><span>Data de Nascimento</span></div>
+      <div class="campo"><strong id="voo"></strong><span>Voo</span></div>
+      <div class="campo"><strong id="ida"></strong><span>Data de Ida</span></div>
+      <div class="campo"><strong id="volta"></strong><span>Data de Volta</span></div>
+      <div class="campo"><strong>Econômica/VIP</strong><span>Classe</span></div>
+      <div class="campo"><strong>R$ 799,00</strong><span>Valor</span></div>
+      <div class="campo"><strong>06/06/2025</strong><span>Data de Vencimento</span></div>
+    </div>
+
+    <div class="codigo-barras">
+      <p>Código de Barras</p>
+      <div class="barra-falsa"></div>
+    </div>
+
+    <button onclick="window.print()">Imprimir Boleto</button>
+  </div>
+
+  <script>
+    // Pega os dados da URL
+    const params = new URLSearchParams(window.location.search);
+
+    document.getElementById('nome').textContent = params.get('nome') || '';
+    document.getElementById('rg').textContent = params.get('rg') || '';
+    document.getElementById('nasc').textContent = params.get('nasc') || '';
+    document.getElementById('voo').textContent = params.get('voo') || '';
+    document.getElementById('ida').textContent = params.get('ida') || '';
+    document.getElementById('volta').textContent = params.get('volta') || '';
+  </script>
+
+</body>
+</html>
