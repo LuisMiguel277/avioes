@@ -443,7 +443,7 @@ picture {
 
 /* ======================== RESPONSIVIDADE ======================== */
 /* Responsivo: Estilos para telas menores (até 768px) */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 1200px) {
 
     /* ---------- HEADER ---------- */
     header {
