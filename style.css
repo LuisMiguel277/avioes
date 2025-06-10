@@ -13,14 +13,14 @@
 
 /* ======================== CABEÇALHO E MENU ======================== */
 header {
-    background: url("Imagens/fundo.webp") no-repeat fixed;
+    background: url("Imagens/papeldeparedeprinc.webp") no-repeat fixed;
     background-position: right left;
     background-size: cover;
     height: 100vh;
     text-align: center;
-    image-rendering: auto;
 }
 header > picture > img {
+
     width: 500px;
     margin: auto;
 }
@@ -448,6 +448,7 @@ picture {
     /* ---------- HEADER ---------- */
     header {
         height: 120vh;
+        background-position: top right;
     }
 
     header > picture > img {
